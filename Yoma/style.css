@@ -1,0 +1,184 @@
+@font-face 
+{
+  font-family: "lego";
+  src: url(Fuentes/kg_lego_house/KGLegoHouse.ttf);
+}
+@font-face 
+{
+  font-family: "Learnes";
+  src: url(Fuentes/letters_for_learners/Letters\ for\ Learners.ttf);
+}
+/*//////////////////////////////////////*/
+* 
+{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+i 
+{
+  color: #eae1e1;
+}
+header 
+{
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  transition: 0.7s;
+  padding: 30px 20px;
+  z-index: 10;
+}
+header .logo 
+{
+  position: relative;
+  width: 5rem;
+  height: 3rem;
+  letter-spacing: 2px;
+  transition: 1.5s;
+  text-decoration: none;
+}
+nav 
+{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+header ul 
+{
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+header ul li 
+{
+  font-family: "lego";
+  list-style: none;
+}
+header ul li a 
+{
+  position: relative;
+  font-family: "Learnes";
+  font-size: 1.7rem;
+  margin: 0 15px;
+  text-decoration: none;
+  color: #eae1e1;
+  letter-spacing: 2px;
+  font-weight: 600;
+  transition: 0.7s;
+}
+header ul :hover 
+{
+  border-radius: 30px;
+  background: #333333;
+  animation: bounce .5s;
+
+}
+.zona1 
+{
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  background: url(Pictures/ban1.jpg);
+  background-size: cover;
+  background-position: center;
+}
+header.abajo 
+{
+  background: #1d1d1d;
+  padding: 15px 20px;
+}
+header.abajo ul li a,
+header.abajo i 
+{
+  color: #e7e7e7;
+}
+.checkBtn,
+#check 
+{
+  font-size: 2rem;
+  display: none;
+}
+header.abajo .logo 
+{
+  color: #e7e7e7;
+}
+
+@media (max-width: 858px) 
+{
+  .checkBtn 
+  {
+    margin-right: 5rem;
+    display: block;
+  }
+  header nav 
+  {
+    display: none;
+  }
+
+  header ul 
+  {
+    top: 17.5px;
+    display: inline;
+    margin-left: 16px;
+    text-align: center;
+    transition: all 0.5s;
+    background: #000000;
+  }
+  header ul li a,
+  .fa-house,
+  .fa-user,
+  .fa-bell-concierge,
+  .fa-address-book 
+  {
+    font-size: 0.7rem;
+    line-height: 30px;
+    margin: 50px 5;
+  }
+  header ul li a 
+  {
+    font-size: 20px;
+  }
+  #check:checked ~ nav 
+  {
+    display: block;
+  }
+}
+.contenido 
+{
+  margin-top: 30px;
+  text-align: center;
+  font-family: "lego";
+}
+.fa-facebook
+{
+    position:fixed;
+    bottom: 20px;
+    right: 20px;
+    display: block;
+    color: #1900fb;
+    background: #ffffff;
+    width: 55px;
+    height: 55px;
+    font-size: 55px;
+    text-align: center;
+    border-radius: 50%;
+    box-shadow: 0px 1px 10px 
+    rgba(0, 0,0,0.4);
+    transition: all 0.5s ease;
+}
+.fa-facebook:hover
+{
+    background: #1900fb;
+    color: #ffffff;
+}
+@keyframes bounce 
+{ 30%
+    {
+        -webkit-transform: translateY(-10px);
+        transform: translateY(-10px);
+    }
+}
